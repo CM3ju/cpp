@@ -119,6 +119,23 @@ int main()
     while ((clock() - time_start) < display_time);
     cout << "done" <<endl;
 
+    //二维数组操作
+    int arr_dimen2[2][3] = {
+        {1, 2, 3},
+        {3, 4, 5}
+    };
+    cout << sizeof(arr_dimen2) << " " << sizeof(arr_dimen2[0]) << endl;
+
+    //指针常量，常量指针
+    int num1 = 1;
+    int num2 = 2;
+    const int* p6 = &num1;
+    //*p6 = num2;不可以修改指针指向的值
+    p6 = &num2;     //可以修改指针的指向
+    int* const p7 = &num2;
+    *p7 = num1;     //可以修改指针指向的值
+    //p7 = &num1;不可以修改指针的指向
+
 
 
 
