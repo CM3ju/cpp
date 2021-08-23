@@ -65,6 +65,9 @@ void bubble_sort()
                         cache_score = list_temp->score;
                         list_temp->score = list_temp->next->score;
                         list_temp->next->score = list_temp->score; 
+                        cache_id = list_temp->id;
+                        list_temp->id = list_temp->next->id;
+                        list_temp->next->id = cache_id;
                     }
                 list_temp = list_temp->next; //换下两个数字进行比较
             }          
